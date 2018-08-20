@@ -1,0 +1,32 @@
+.pagination {
+	display: flex;
+	width: 350px;
+	margin: 40px auto 20px auto;
+	background: #ffffff;
+	/*border: 1px solid #eeeeee;*/
+	border-radius: 10px;
+}
+
+/*.pagination a {
+	text-decoration: none;
+}
+
+.pagination a: hover {}*/
+
+.pagination div {
+	padding: 10px 20px;
+	border: 1px solid #eeeeee;
+	border-top: 0px;
+	border-bottom: 0;
+	border-right: 0;
+}
+
+.pagination div:nth-child(1) {
+	border-left: 0;
+}
+
+.pagination div.current {
+	font-weight: bold;
+	background: #EC8732;
+	color: #ffffff;
+}

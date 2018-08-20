@@ -1,0 +1,105 @@
+extends layout
+
+block head
+    - string pageTitle = "Profile of " ~ user.fullName ~ " | Quertiv";
+    - string pageDescription = "";
+
+    link(rel="stylesheet", href="/#{AssetsURL.css}/user.css")
+    link(rel="stylesheet", href="/#{AssetsURL.css}/tivs.css")
+    link(rel="stylesheet", href="/#{AssetsURL.css}/pagination.css")
+    /// script(type="text/javascript", src="/#{AssetsURL.js}/user.js")
+
+block content
+    section.user-section.has-box-shadow
+
+        section.user
+
+            div.profile
+                figure
+                    img(src="/media/avatar.jpg", alt="Profile Photo")
+                ul
+                    li #{user.fullName}
+                    li #{user.skillName}
+                    li #{user.location}
+    
+            ul.about 
+                li #{user.bio}
+                li: a(href="#{user.websiteURL}") #{user.websiteURL}
+            
+            div.follow
+                p.arrow
+
+                button.button(type="button") Follow
+                div 200
+
+        section.map
+            div
+                
+    section.authored-tivs-section.has-box-shadow
+        h3 Tivs Authored
+
+        form.form.user-tivs-search-form
+            div
+                label Search authored tivs:
+                input(type="search", name="search_user_tiv", placeholder="Enter a keyword or phrase to search ...")
+                button(type="button", name="button") Search
+
+        div.search-status
+            p Search results for #[em ice cream]
+
+    section.tivs-section
+        - if (tivs.length)
+            - foreach(tiv; tivs)
+                section.tiv.has-box-shadow
+                    span.category-tag: a(href="/explore/#{tiv.categoryName}") #{tiv.categoryName}
+
+                    div
+                        figure
+                            a(href="/tiv_view/#{tiv.tivID}"): img(src="/#{AssetsURL.media}/#{tiv.mediaFile1}", alt="Cover image for '#{tiv.title}'")
+                        h3: a(href="/tiv_view/#{tiv.tivID}") #{tiv.title}
+
+                    div.author.clearfix
+                        figure
+                            img(src="/#{AssetsURL.media}/avatar.jpg", alt="Avatar")
+                        div
+                            ul
+                                li: a(href="/users/#{tiv.userID}") #{tiv.fullName}
+                                li #{tiv.skillName}
+                                li #{tiv.location}
+                        div
+                            ul  
+                                li 
+                                li 2 h
+                                li + 20
+        - else
+            p No tiv is published this user.
+
+    // Pagination
+    
+    - if (pagination.totalPages() > 1)
+        section.pagination.has-box-shadow
+
+            // Previous page
+            - if(pagination.hasPreviousPage()) 
+                div.previous: a(href="/users/#{user.userID}/#{pagination.previousPage()}") &laquo;
+            - else 
+                div &nbsp;
+
+            // Shows pages Numbers
+            - foreach (pageNumber; 1..pagination.totalPages() + 1)
+                - if (pageNumber == pagination.currentPage) 
+                    div.current #{pageNumber}
+                - else 
+                    div: a(href="/users/#{user.userID}/#{pageNumber}") #{pageNumber}
+
+            // Next page
+            - if (pagination.hasNextPage())
+                div.next: a(href="/users/#{user.userID}/#{pagination.nextPage()}") &raquo;
+            - else 
+                div &nbsp;
+                 
+
+               
+
+
+

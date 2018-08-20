@@ -1,0 +1,11 @@
+extends layout
+
+block head
+    - string pageTitle = "Blog | Quertiv";
+    - string pageDescription = "Blog description";
+
+    link(rel="stylesheet", href="/css/explore.css")
+    script(type="text/javascript", src="/js/explore.js")
+
+block content
+    section.notifications-section

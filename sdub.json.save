@@ -1,0 +1,33 @@
+{
+	"authors": [
+		"Lawrence Aberba"
+	],
+	"description": "Quertiv development",
+	"name": "quertiv-dev",
+	"dependencies": {
+		"mongostore": "~>1.1.0",
+		"diet-ng": "~>1.1.1",
+		"oauth": "~>0.1.1",
+		"requests": "~>0.4.0",
+		"urld": "~>1.1.0",
+		"jsonizer": "~>0.7.3",
+		"botan": "~>1.12.8",
+		"vibemail": "~>2.0.0",
+		"vibe-d": "~>0.7.28",
+		"mail": "~>0.3.1",
+		"mysql-lited": "~>0.3.15",
+		"ip2location-d": "~>8.0.3",
+		"mysql-native": "~>0.1.6",
+		"vibe-s3": "~>0.0.6",
+		"vibemail":"~>2.0.0"
+	},
+	"license": "proprietary",
+	"copyright": "Copyright © 2017, Lawrence Aberba",
+	"versions": [
+		"VibeDefaultMain"
+	]
+}
+
+"ip2location-d": "~>8.0.3",
+"botan": "~>1.12.8",
+"vibe-s3": "~>0.0.6",

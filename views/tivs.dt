@@ -1,0 +1,60 @@
+extends layout
+
+block head
+    - string pageTitle = "Tivs | Quertiv";
+    - string pageDescription = "A collection of creative works";
+
+    link(rel="stylesheet", href="/#{AssetsURL.css}/tivs.css")
+    link(rel="stylesheet", href="/#{AssetsURL.css}/pagination.css")
+
+block content
+    section.tivs-section
+        - if (tivs.length)
+            - foreach(tiv; tivs)
+                section.tiv.has-box-shadow
+                    span.category-tag: a(href="/explore/#{tiv.categoryName}") #{tiv.categoryName}
+
+                    div
+                        figure
+                            a(href="/tiv_view/#{tiv.tivID}"): img(src="/#{AssetsURL.media}/#{tiv.mediaFile1}", alt="Cover image for '#{tiv.title}'")
+                        h3: a(href="/tiv_view/#{tiv.tivID}") #{tiv.title}
+
+                    div.author.clearfix
+                        figure
+                            img(src="/#{AssetsURL.media}/avatar.jpg", alt="Avatar")
+                        div
+                            ul
+                                li: a(href="/users/#{tiv.userID}") #{tiv.fullName}
+                                li #{tiv.skillName}
+                                li #{tiv.location}
+                        div
+                            ul  
+                                li 
+                                li 2 h
+                                li + 20
+        - else
+            p No results founds
+
+    // Pagination
+    
+    - if (pagination.totalPages() > 1)
+        section.pagination.has-box-shadow
+
+            // Previous page
+            - if(pagination.hasPreviousPage()) 
+                div.previous: a(href="/tivs/#{pagination.previousPage()}") &laquo;
+            - else 
+                div &nbsp;
+
+            // Shows pages Numbers
+            - foreach (pageNumber; 1..pagination.totalPages() + 1)
+                - if (pageNumber == pagination.currentPage) 
+                    div.current #{pageNumber}
+                - else 
+                    div: a(href="/tivs/#{pageNumber}") #{pageNumber}
+
+            // Next page
+            - if (pagination.hasNextPage())
+                div.next: a(href="/tivs/#{pagination.nextPage()}") &raquo;
+            - else 
+                div &nbsp;

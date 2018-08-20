@@ -1,0 +1,87 @@
+- import qv.enums;
+
+doctype html
+head
+    /// Blobal CSS and JS
+    link(rel="stylesheet", href="/#{AssetsURL.css}/app.css")
+    link(rel="stylesheet", href="/#{AssetsURL.css}/account-menu.css")
+
+    script(type="text/javascript", src="/#{AssetsURL.js}/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="/#{AssetsURL.js}/app.js")
+
+    /// Insert head template here
+    block head
+
+    // Global head elements
+    title #{pageTitle}
+
+    meta(charset="utf-8")
+    link(rel="shortcut icon", type="image/ico", href="/#{AssetsURL.img}/favicon.ico")
+    meta(name="viewport", content="width='device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="description", content="#{pageDescription}")
+
+    
+body
+    header#header
+        div.wrapper
+            nav
+                ul.thumb-menu
+                    li: a(href="/") Tivs
+                    li: a(href="/discover") Discover
+                    li: a(href="/blog") Blog
+
+                figure.logo
+                    a(href="/"): img(src="/#{AssetsURL.img}/logo.png", alt="Quertiv Logo")
+
+                ul.main-menu
+                    li: a(href="/") Tivs
+                    li: a(href="/discover") Discover
+                    li: a(href="/blog") Blog
+
+                form.form
+                    input(type="search", name="search", placeholder="Search ...")
+                    input(type="hidden", name="category", value="all")
+                    input(type="hidden", name="filter_by", value="all")
+
+                
+                div.account-menu
+                    figure(class="avatar-thumb")
+                        img(src="/img/avatar.jpg", alt="Avatar", title="Account")
+
+                    section(class="menu-wrapper")
+                        p(class="arrow")
+
+                        section.has-box-shadow(class="menu")
+                            section(class="toggle-menu")
+                                div(class="toggle-account active") Account
+                                div(class="toggle-notification") Notifications #[span(class="badge") 10+]
+
+                            section(class="menu-pane options")
+                                div(class="option"): a(href="/users/") Profile
+                                div(class="option"): a(href="/settings") Settings
+
+                                div(class="option"): a(href="/privacy_policy") Privacy Policy
+                                div(class="option"): a(href="/terms_of_use") Terms of Use
+
+                            section(class="menu-pane notifications")
+
+                                section(class="notification")
+                                    a(href="#")
+                                        div(class="letter"): span U
+                                        
+                                    div(class="info")
+                                        h4 Title of notification
+                                        p Activity description summary here nnns ssjs sjjs ...#[a(href="#") read more &raquo;]
+
+                                section(class="all-btn")
+                                    a(href="/notifications", title="See all notifications") All Notifications
+
+
+                            section(class="actions")
+                                div: a(href="/signout", title="Sign out of your account") Sign Out
+                                div: a(href="/signin", title="Sign into your account") Sign In
+                                div: a(href="/signup", title="Create a new account") Sign Up
+        
+    div#content-wrapper.wrapper
+        main#content
+            block content

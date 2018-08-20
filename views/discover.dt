@@ -1,0 +1,21 @@
+extends layout
+
+block head
+    - string pageTitle = "Discover | Quertiv";
+    - string pageDescription = "Sign in your existing account or create an account";
+
+    link(rel="stylesheet", href="/css/discover.css")
+
+block content
+    section.categories-section
+        - if (categories.length >= 1)
+            - foreach (category; categories)
+                section.category.has-box-shadow
+                    figure
+                        img(src="#{AssetsURL.media}/media1.jpg")
+
+                    h3 #{category.categoryName}
+
+                    ul
+                        li #{category.categoryDescription}
+                        li: a(href="#") Follow

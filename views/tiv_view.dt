@@ -1,0 +1,61 @@
+extends layout
+
+block head
+    - string pageTitle = "Tivs &raquo; #{tiv.title} | Quertiv";
+    - string pageDescription = "Sign in your existing account or create an account";
+
+    link(rel="stylesheet", href="/#{AssetsURL.css}/tiv-view.css")
+    script(type="text/javascript", src="/#{AssetsURL.js}/tiv-view.js")
+
+block content
+    section.tiv-section
+
+        section.tiv-content
+
+            section.tiv-info.has-box-shadow
+                h1.title #{tiv.title}
+
+                ul.author
+                    li By #[a(href="/users/#{tiv.userID}") #{tiv.fullName}]
+                    li In #[a(href="/explore/#{tiv.categoryName}") #{tiv.categoryName}]
+                    li On #{tiv.addedOn}
+
+                figure.cover
+                    img(src="/#{AssetsURL.media}/#{tiv.mediaFile1}", alt="Cover image for '#{tiv.title}'")
+
+                section.description
+                    section #{tiv.description}
+
+                    section.author-profile.clearfix
+                        figure
+                            img(src="/#{AssetsURL.media}/#{tiv.avatar}")
+
+                        ul
+                            li: a(href="user/#{tiv.userID}") #{tiv.fullName}
+                            li #{tiv.skillName}
+                            li #{tiv.bio}
+
+
+            section.tiv-comments.has-box-shadow
+                h2 Comments on tiv
+
+                section.comment.clearfix
+                    figure
+                        img(src="/#{AssetsURL.media}/avatar.jpg")
+
+                    ul
+                        li Full Name 
+                        li #[a(href="#") Reply User] This is the comment on this tiv from another user
+
+                section.comment
+                    figure
+                        img(src="/#{AssetsURL.media}/avatar.jpg")
+
+                    ul
+                        li Full Name &laquo; #[span.reply-to John Ben]
+                        li #[a(href="#") Reply User] This is the comment on this tiv from another user
+
+
+        aside.aside.has-box-shadow
+            section.ads
+            section.featured-tivs

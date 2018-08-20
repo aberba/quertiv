@@ -1,0 +1,22 @@
+{
+	"authors": [
+		"Lawrence Aberba"
+	],
+	"description": "Quertiv development",
+	"name": "quertiv",
+	"dependencies": {
+		"vibe-d": "~>0.8.0",
+		"mysql-lited": "~>0.3.15",
+		"botan": "~>1.12.9",
+		"vibe-d:tls": "~>0.8.0"
+	},
+	"subConfigurations": {
+		"vibe-d:tls": "botan"
+	},
+	"license": "proprietary",
+	"copyright": "Copyright © 2017, Lawrence Aberba",
+	"versions": [
+		"VibeDefaultMain",
+		"DietUseCache"
+	]
+}

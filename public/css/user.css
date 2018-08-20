@@ -1,0 +1,106 @@
+.user-section {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.user-section {
+
+} 
+
+/*******************************************************************
+    User Profile Information
+********************************************************************/
+.user-section .user {
+    width: 320px;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+}
+
+.user-section .user .profile {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 10px 0;
+    /*border: 1px solid red;*/
+}
+
+.user-section .user .profile figure {
+    width: 67px;
+    height: 67px;
+    margin: 0 10px 0 0;
+}
+
+.user-section .user .profile figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.user-section .user ul.about {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.user-section .user ul.about li {
+    margin: 5px 0;
+}
+
+.user-section .user .follow {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 0 0;
+    border: 1px solid #eeeeee;
+}
+
+.user-section .user .follow .button {
+    width: calc(100%/2);
+    margin: 0;
+}
+
+.user-section .user .follow .arrow:before {
+    content: "";
+    position: absolute;
+    right: calc(100%/2 - 15px);
+    top: -30px;
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: transparent red transparent transparent;
+    z-index: 1;
+}
+
+
+/*******************************************************************
+    User Location Map
+********************************************************************/
+.user-section .map {
+    width: calc(100% - 310px);
+    margin: 0 0 0 10px;
+    border: 1px solid #eeeeee;
+    background: #eeeeee;
+}
+
+/*******************************************************************
+    User Tivs Section
+********************************************************************/
+.tivs-section {
+    margin: 15px 0 0 0;
+}
+
+.authored-tivs-section {
+    margin: 20px 0 -10px 0;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.authored-tivs-section form.user-tivs-search-form {
+
+}
+
+.authored-tivs-section form.user-tivs-search-form input[type=search] {
+    /*display: inline-block;*/
+    width: calc(100% - 105px);
+}

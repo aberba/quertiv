@@ -1,0 +1,74 @@
+.sign-section, .forms-container {
+	display: flex;
+    border: 1px solid #eeeeee;
+    min-height: 580px;
+}
+
+.slides-section, .forms-section {
+	padding: 1em;
+	margin: .5em;
+	/*border: 1px solid yellow;*/
+	background: #ffffff;
+}
+
+.forms-section {
+	width: 320px;
+}
+
+.slides-section {
+	width: calc(100% - 320px);
+}
+
+
+/*************************************************************************
+	Sign page toggle menu
+*************************************************************************/
+.forms-section .toggle-menu {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid #eeeeee;
+}
+
+.forms-section .toggle-menu a {
+	width: 50%;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #eeeeee;
+
+	text-decoration: none;
+	text-transform: uppercase;
+	outline: none;
+}
+
+.forms-section .toggle-menu a:hover {
+	text-decoration: underline;
+}
+
+.forms-section .toggle-menu a.active {
+	background: #eeeeee;
+}
+
+
+/*************************************************************************
+	Sign form
+*************************************************************************/
+.forms-section .form {
+	display: none;
+}
+
+.forms-section .form h2 {
+	margin-bottom: 20px;
+}
+
+.forms-section .sign-in-form, .forms-section .sign-up-form {
+	padding: 5px;
+	border: 1px solid #eeeeee;
+}
+
+.forms-section .form.active {
+	display: block;
+}
+
+.forms-section .form .button {
+	display: block;
+}

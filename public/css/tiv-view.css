@@ -1,0 +1,126 @@
+#content {
+	/*border: 1px solid red;*/
+}
+
+.tiv-section {
+	display: flex;
+	flex-direction: row;
+}
+
+
+/********************************************************
+  Tiv Content
+ ********************************************************/
+.tiv-section .tiv-content {
+	width: calc( 100% - (1em + 320px) );
+	margin: 0 1em 0 0;
+}
+
+.tiv-section .tiv-content .tiv-info {
+	background: #ffffff;
+	padding: 20px 10px;
+	margin: 0 0 1em 0;
+	font-size: 1.4em;
+	line-height: 1.3em;
+}
+
+.tiv-section .tiv-content .tiv-info .title {
+	font-size: 2.1em;
+	line-height: 1.2em;
+	margin: 0.5em 0;
+}
+
+.tiv-section .tiv-content .tiv-info .cover {
+	margin: 25px 0;
+	padding: 0;
+}
+
+.tiv-section .tiv-content .tiv-info .cover img {
+	width: 100%;
+}
+
+.tiv-section .tiv-content .tiv-info .author {
+	margin: 0 0 10px 0;
+	list-style: none;
+}
+
+.tiv-section .tiv-content .tiv-info .author li {
+	display: inline-block;
+	margin:  0 1.3em 0 0;
+	font-size: .6em;
+	text-transform: uppercase;
+}
+
+.tiv-section .tiv-content .tiv-info .description {
+	/*margin: 10px 0 0 0;*/
+}
+
+.tiv-section .tiv-content .tiv-info .description .author-profile {
+	padding: 1em;
+	margin: 2em  0 0 0;
+	font-size: 1em;
+	border: 1px solid #eeeeee;
+}
+
+.tiv-section .tiv-content .tiv-info .description .author-profile figure {
+	float: left;
+	width: 70px;
+	height: 70px;
+}
+
+.tiv-section .tiv-content .tiv-info .description .author-profile figure img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.tiv-section .tiv-content .tiv-info .description .author-profile ul {
+	list-style: none;
+	margin: 0 0 0 80px;
+	/*border: 1px solid red;*/
+}
+
+/********************************************************
+  Tiv Comments
+ ********************************************************/
+.tiv-section .tiv-content .tiv-comments {
+	padding: 10px;
+	background: #ffffff;
+}
+
+.tiv-section .tiv-content .tiv-comments .comment {
+	padding: 1em;
+	margin: 1em 0;
+	border: 1px solid #eeeeee;
+}
+
+.tiv-section .tiv-content .tiv-comments .comment .reply-to {
+	color: #333333;
+}
+
+.tiv-section .tiv-content .tiv-comments .comment figure {
+	width: 45px;
+	height: 45px;
+	margin: 0 1em 0 0;
+	float: left;
+}
+
+.tiv-section .tiv-content .tiv-comments .comment figure img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.tiv-section .tiv-content .tiv-comments .comment ul {
+	list-style: none;
+	margin: 0 0 0 60px;
+	/*border: 1px solid red;*/
+}
+
+/********************************************************
+  Aside
+ ********************************************************/
+.tiv-section .aside {
+	width: 320px;
+	background: #ffffff;
+}

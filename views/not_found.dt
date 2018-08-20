@@ -1,0 +1,13 @@
+extends layout
+
+block head
+    - string pageTitle = "Resource Not Found | Quertiv";
+    - string pageDescription = "";
+
+    link(rel="stylesheet", href="/#{AssetsURL.css}/not-found.css")
+
+block content
+    section.user-section.has-box-shadow
+        div.not-found
+            h3 Oops!
+            p #{message}  

@@ -1,0 +1,35 @@
+
+
+/********************************************************
+  Tiv Individual Category
+ ********************************************************/
+.categories-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.categories-section .category {
+	width: 31%;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.categories-section .category h3 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.categories-section .category figure img {
+    width: 100%;
+}
+
+.categories-section .category ul {
+	list-style: none;
+}
+
+.categories-section .category ul li {
+	margin: .5em 0;
+}

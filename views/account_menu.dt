@@ -1,0 +1,47 @@
+div.account-menu
+
+    figure(class="avatar-thumb")
+        img(src="/img/avatar.jpg", alt="Avatar" title="Account Menu")
+
+    section(class="menu-wrapper")
+        p(class="arrow")
+
+        section(class="menu")
+            section(class="toggle-menu")
+                div(class="toggle-account active") Account
+                div(class="toggle-notification") Notifications #[span(class="badge") 10+]
+
+            section(class="menu-pane options")
+                div(class="option"): a(href="#") Profile
+                div(class="option"): a(href="#") Settings
+
+                div(class="option"): a(href="#") Privacy Policy
+                div(class="option"): a(href="#") Terms of Use
+
+            section(class="menu-pane notifications")
+    
+                section(class="notification")
+                    div(class="letter")
+                        span A
+                  
+                    div(class="info")
+                        h4 Title of notification
+                        p Activity description summary here nnns ssjs sjjs
+
+                section(class="notification")
+                    a(href="#")
+                        div(class="letter")
+                            span U
+                        
+                    div(class="info")
+                        h Title of notification
+                        p Activity description summary here nnns ssjs sjjs ...#[a(href="#") read more &raquo;]
+
+                section(class="all-btn")
+                    a(href="/notifications" title="See all your notifications") All Notifications
+
+
+            section(class="actions")
+                div: a(href="/sign/out" title="Log out") Sign Out
+                div: a(href="/sign/in" title="Log into your account") Sign In
+                div: a(href="/sign/out" title="Create an account") Sign Up

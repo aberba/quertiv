@@ -1,0 +1,104 @@
+* form, form > * {
+	-webkit-box-sizing: border-box;
+     -khtml-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+} 
+
+.form label {
+	/*margin: 50px 3px 3px 3px;*/
+	margin: 3px;
+}
+
+.form input[type=text], .form input[type=email], .form input[type=search],
+.form input[type=url], .form input[type=password], .form textarea {
+	width: 98%;
+	padding: 10px;
+	margin: 3px 3px 20px 3px;
+	background: #ffffff;
+	border: 2px solid #eeeeee;
+    outline: none;
+
+	-webkit-box-sizing: border-box;
+     -khtml-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.form input[type=text]:focus, 
+.form input[type=email]:focus, 
+.form input[type=search]:focus,
+.form input[type=url]:focus, 
+.form input[type=password]:focus, 
+.form textarea:focus {
+	outline: none;
+    border: 2px solid dodgerblue;
+}
+
+.form input[type=text].invalid, 
+.form input[type=email].invalid, 
+.form input[type=search].invalid,
+.form input[type=url].invalid, 
+.form input[type=password].invalid, 
+.form textarea.invalid {
+    border: 2px solid red;
+}
+
+.form input[type=text].valid, 
+.form input[type=email].valid, 
+.form input[type=search].valid,
+.form input[type=url].valid, 
+.form input[type=password].valid, 
+.form textarea.valid {
+    border: 2px solid #21B64C;
+}
+
+.form input[type=checkbox] {
+	margin: 0 3px 0 0;
+}
+
+.form input[type=button], .form button, .button {
+	padding: 10px 20px;
+	margin: 20px 0 0 3px;
+	color: #ffffff !important;
+	text-align: center;
+	background: #EC8732;
+	border: 1px solid #EC8732;
+	border-radius: 3px;
+}
+
+.form input[type=button].inactive, 
+.form button.inactive, 
+.button.inactive {
+	opacity: .5;
+}
+
+
+
+/************************************************************
+	Progress Bar
+************************************************************/
+.form .status {
+	display: none;
+	padding: 3px;
+	margin: 5px 3px 15px 3px;
+	font-size: .9em;
+	border: 1px solid #f66262;
+	color: #f66262;
+}
+
+.form .status .status-bar {
+	height: 8px;
+}
+
+.form .status .status-bar .progress {
+	width: 10%;
+	height: 100%;
+	background: green;
+	border: 1px solid green;
+	border-radius: 3px;
+}

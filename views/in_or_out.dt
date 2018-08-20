@@ -1,0 +1,74 @@
+extends layout
+
+block head
+    - string pageTitle = "Sign in or Sign up | Quertiv";
+    - string pageDescription = "Sign in your existing account or create an account";
+
+    link(rel="stylesheet", href="/#{AssetsURL.css}/in-or-out.css")
+    script(type="text/javascript", src="/#{AssetsURL.js}/in-or-out.js")
+
+block content
+    section.sign-section
+        
+        section.forms-section.has-box-shadow
+            div.toggle-menu
+                a.sign-in(href="/signin", class=actionType == "in" ? "active" : "") Sign In
+                a.sign-up(href="/signup", class=actionType == "up" ? "active" : "") Sign Up
+
+                //div(class=actionType == "up" ? "active" : ""): a(href="#") Sign Up
+                //div.status-bar
+                        //div.progress-bar: div.progress(data-level="10")
+                        //div.progress-msg: p Invalid email and password combination 
+
+            div.forms-container
+                form.form.sign-in-form(class=actionType == "in" ? "active" : "")
+                    h2 Sign into your existing account
+
+                    div.status.sign-in-status
+                    
+                    div
+                        label(for="email") Email Address:
+                        input(type="email", name="email", placeholder=" johndoe@mail.com")
+
+                    div
+                        label(for="password") Password:
+                        input(type="password", name="password", placeholder=" ********")
+
+                    div
+                        input(type="checkbox", name="keep", value="1")
+                        label(for="email") Remember me.
+
+                    button(type="button") Sign In
+
+
+                form.form.sign-up-form(class=actionType == "up" ? "active" : "")
+                    h2 Create an account
+
+                    div.status.sign-up-status
+
+                    div
+                        label(for="full_name") Your Full Name:
+                        input(type="text", name="full_name", placeholder="e.g. John Doe")
+
+                    div
+                        label(for="skill") Your main skill:
+                        input(type="text", name="skill", placeholder="e.g. Carpentry")
+
+                    div
+                        label(for="email") Email Address:
+                        input(type="email", name="email", placeholder="e.g. johndoe@mail.com")
+
+                    div
+                        label(for="password") Password:
+                        input(type="password", name="password", placeholder=" ********")
+
+                    input(type="checkbox", name="agree", value="1") 
+                    span Yes, I agree with Quertiv's #[a(href="/privacy_policy") Privacy Policy] and #[a(href="/terms_of_use") Terms of Use] #[sup(class="error") *]
+
+                    input(type="hidden", name="lat_lng", value="yes")
+
+                    div
+                        button(type="button") Sign Up
+
+        section.slides-section.has-box-shadow
+            p Slides will be here

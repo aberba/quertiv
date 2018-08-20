@@ -1,0 +1,14 @@
+
+
+/********************************************************
+    Page or Resource Not Individual Category
+********************************************************/
+.user-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.user-section .not-found {
+	background: #ffffff;
+}

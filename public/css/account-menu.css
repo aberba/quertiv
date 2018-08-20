@@ -1,0 +1,187 @@
+.account-menu {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.account-menu {
+    width: 
+    position: relative;
+   /* border: 1px solid red;*/
+}
+
+.account-menu .avatar-thumb {
+    width: 42px;
+    height: 42px;
+}
+
+.account-menu .avatar-thumb img {
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
+}
+
+.account-menu .menu-wrapper {
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+/*********************************************************
+ Arrow
+ ********************************************************/
+.account-menu .menu-wrapper .arrow:before {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: -13px;
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: transparent transparent #ffffff transparent;
+    z-index: 1;
+}
+
+.account-menu .menu-wrapper .menu {
+    position: absolute;
+    right: -2px;
+    top: -84px;
+
+    width: 320px;
+    padding: 5px;
+    margin: 100px auto;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.account-menu .menu-wrapper .menu .toggle-menu {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #eeeeee;
+}
+
+.account-menu .menu-wrapper .menu .toggle-menu div {
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+.account-menu .menu-wrapper .menu .toggle-menu div.toggle-notification {
+    position: relative;
+}
+
+.account-menu .menu-wrapper .menu .toggle-menu div.toggle-notification .badge {
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    width: 30px;
+    height: 22px;
+    padding: 2px;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    background: #EC8732;
+    border: 1px solid #EC8732;
+    border-radius: 8px;
+    box-shadow: 0 0 1px .5px rgba(0, 0, 0, 0.2);
+}
+
+.account-menu .menu-wrapper .menu .toggle-menu div.active {
+    background: #eeeeee;
+    border-color: #eeeeee;
+}
+
+.account-menu .menu-wrapper .menu .menu-pane {
+    padding: 3px;
+    /*margin: 2px 0 0 0;*/
+    background: #eeeeee;
+    /*overflow-y: scroll;*/
+}
+
+
+/******************************************************************
+  Account pane section
+ ******************************************************************/
+.account-menu .menu-wrapper .menu .menu-pane .option {
+    padding: 10px;
+    margin: 2px 0;
+    text-transform: capitalize;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    /*box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);*/
+}
+
+
+/**********************************************************************
+  Notification pane items
+ **********************************************************************/ 
+
+.account-menu .menu-wrapper .menu .menu-pane .notification {
+    display: flex;
+    padding: .4em;
+    margin: 5px 0 0 0;
+    background: #ffffff;
+}
+
+/*.account-menu .menu-wrapper .menu .menu-pane .notification:first-child {
+    margin-top: 0;
+}*/
+
+.account-menu .menu-wrapper .menu .menu-pane .notification div.letter {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px 0 0;
+    font-size: 3em;
+    text-align: center;
+    background: dodgerblue;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.account-menu .menu-wrapper .menu .menu-pane .notification div.info {
+    padding: 2px;
+    width: calc(100% - 65px);
+}
+
+.account-menu .menu-wrapper .menu .menu-pane .all-btn {
+    padding: 10px;
+    margin: 5px 0 0 0;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+    /*box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);*/
+}
+
+
+/******************************************************************
+  Actions section
+ ******************************************************************/
+
+.account-menu .menu-wrapper .menu .actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.account-menu .menu-wrapper .menu .actions div {
+    width: calc(100% / 3);
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.account-menu .menu-wrapper .menu a, 
+.account-menu .menu-wrapper .menu a:active,
+.account-menu .menu-wrapper .menu a:visited {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.account-menu .menu-wrapper .menu .actions div a:hover {
+    text-decoration: underline;
+}

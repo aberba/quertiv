@@ -1,0 +1,42 @@
+extends layout
+
+block head
+    - string pageTitle =  "Blog &raquo; Quertiv";
+    - string pageDescription = "author";
+    
+    link(rel="stylesheet", href="/css/author-template.css")
+    script(type="text/javascript", src="/js/explore.js")
+
+block content
+    section.author-section
+
+        section.author-container
+
+            section.author-info
+
+                div.author.clearfix
+                    div.profile
+                        figure
+                            img(src="/media/avatar.jpg", alt="Avatar")
+                        ul.first
+                            li: a(href="user/#{tiv.userID}") #{tiv.fullName}
+                            li #{tiv.skillName}
+                            li #{tiv.location}
+                    ul
+                        li This is about me as the author of this tiv
+                    ul
+                        li Since 20th, June, 2015
+                        li 200 Followers
+                        li: a.button(href="#") Follow
+                div.author-location
+                    div.map
+
+            section.tiv-content
+                h1 #{tiv.title}
+                figure
+                    img(href="#{AssetsURL.media}/media1.jpg")
+
+                div
+                    ul
+                        li By #{tiv.fullName}
+                        li Date #{tiv.addedOn}
