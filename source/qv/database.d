@@ -16,7 +16,7 @@ class Database
 
 	void openConnection()
 	{
-		this.client_ = new MySQLClient("host=localhost;user=karabuta;pwd=12345678;db=quertiv");
+		this.client_ = new MySQLClient("host=localhost;user=USERNAME;pwd=PASSSWORD;db=quertiv");
 	}
 
 	auto getConnection() 
